@@ -1,0 +1,32 @@
+﻿
+@using Tutorial.Web.Model
+@model Tutorial.Web.ViewModels.StudentCreateViewModel
+
+<h1>创建学生</h1>
+
+<form method="post">
+    <div>
+        <label asp-for="FirstName"></label>   
+        <input asp-for="FirstName" />
+        <span asp-validation-for="FirstName"></span>
+    </div>
+    <div>
+        <label asp-for="LastName"></label>
+        <input asp-for="LastName" />
+        <span asp-validation-for="LastName"></span>
+    </div>
+    <div>
+        <label asp-for="BirthDay"></label>
+        <input asp-for="BirthDay" type="date" />
+        <span asp-validation-for="BirthDay"></span>
+    </div>
+
+    <div>
+        <label asp-for="Gender"></label>
+        <select asp-for="Gender" asp-items="Html.GetEnumSelectList<Gender>()"></select>
+    </div>
+    
+    <div asp-validation-summary="ModelOnly"></div>
+
+    <button type="submit" name="save">保存</button>
+</form>
