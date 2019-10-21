@@ -58,3 +58,5 @@ HostName github.com
 User yyy
 IdentityFile C:\\Users\\xxx\\.ssh\\id_rsa_github
 ```
+
+## 如何设置 GitHub 的代码权限
