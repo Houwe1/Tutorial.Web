@@ -9,16 +9,16 @@ namespace Tutorial.Web.ViewModels
 {
     public class StudentCreateViewModel
     {
-        [Display(Name = "名"), Required, MaxLength(10)]
+        [Display(Name = "FirstName"), Required, MaxLength(10)]
         public string FirstName { get; set; }
 
-        [Display(Name = "姓"), Required, MaxLength(10)]
+        [Display(Name = "LastName"), Required, MaxLength(10)]
         public string LastName { get; set; }
 
-        [Display(Name = "出生日期"), DataType(DataType.Date)]
+        [Display(Name = "BirthDay"), DataType(DataType.Date)]
         public DateTime BirthDay { get; set; }
 
-        [Display(Name = "性别")]
+        [Display(Name = "Gender")]
         public Gender Gender { get; set; }
     }
 }

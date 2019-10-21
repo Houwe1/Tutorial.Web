@@ -1,23 +1,61 @@
-﻿@model Tutorial.Web.Model.Student
+﻿@model Student
 @{
-    Layout = null;
+    var isMan = Model.Gender == Gender.男;
+    var isWomen = Model.Gender == Gender.女;
+    var isSecret = Model.Gender == Gender.保密;
+}
+<form>
+    <div class="form-group row">
+        <label for="id" class="col-sm-2 col-form-label">ID</label>
+        <div class="col-sm-10">
+            <input type="email" class="form-control" id="ID" placeholder="Email" value="@Model.Id">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="id" class="col-sm-2 col-form-label">FirstName</label>
+        <div class="col-sm-10">
+            <input type="email" class="form-control" id="firstName" placeholder="Email" value="@Model.FirstName">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="id" class="col-sm-2 col-form-label">LastName</label>
+        <div class="col-sm-10">
+            <input type="email" class="form-control" id="lastName" placeholder="Email" value="@Model.LastName">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="id" class="col-sm-2 col-form-label">BirthDay</label>
+        <div class="col-sm-10">
+            <input type="email" class="form-control" id="birthDay" placeholder="Email" value="@Model.BirthDay">
+        </div>
+    </div>
+    <fieldset class="form-group">
+        <div class="row">
+            <legend class="col-form-label col-sm-2 pt-0">Radios</legend>
+            <div class="col-sm-10">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked="@isMan">
+                    <label class="form-check-label" for="gridRadios1">
+                        男
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2" checked="@isWomen">
+                    <label class="form-check-label" for="gridRadios2">
+                        女
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2" checked="@isSecret">
+                    <label class="form-check-label" for="gridRadios2">
+                        保密
+                    </label>
+                </div>
+            </div>
+        </div>
+    </fieldset>
+</form>
+@section bottom{
+    <a asp-action="Index">Home</a>
 }
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Detail</title>
-</head>
-<body>
-    <div>
-        <h1>学生信息：</h1>
-        <div>ID:@Model.Id</div>
-        <div>姓名:@Model.FirstName @Model.LastName</div>
-        <div>性别:@Model.Gender</div>
-        <div>出生日期:@Model.BirthDay.ToString("yyyy-MM-dd")</div>
-    </div>
-    <a asp-action="Index">返回 Home</a>
-</body>
-</html>

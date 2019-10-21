@@ -25,7 +25,7 @@ namespace Tutorial.Web
 
         public Startup(IConfiguration configuration)
         {
-            this._configuration = configuration;
+            _configuration = configuration;
         }
         /// <summary>
         /// 配置服务
@@ -180,12 +180,11 @@ namespace Tutorial.Web
             #endregion
 
 
-            //app.UseStaticFiles(new StaticFileOptions
-            //{
-            //    RequestPath = "/node_modules",
-            //    FileProvider = new PhysicalFileProvider(Path.Combine(env.ContentRootPath,"node_modules"))
-            //});
-
+            app.UseStaticFiles(new StaticFileOptions
+            {
+                RequestPath = "/node_modules",
+                FileProvider = new PhysicalFileProvider(Path.Combine(env.ContentRootPath, "node_modules"))
+            });
             //app.UseAuthentication();
 
             //app.UseMvc(builder =>

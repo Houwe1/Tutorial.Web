@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Tutorial.Web.Data;
 using Tutorial.Web.Model;
+using Tutorial.Web.ViewModels;
 
 namespace Tutorial.Web.Services
 {
@@ -24,12 +25,12 @@ namespace Tutorial.Web.Services
 
         public Student GetById(int id)
         {
-            return _context.Find<Student>(id);
+            return _context.Students.Find(id);
         }
 
         public Student Add(Student newModel)
         {
-            _context.Students.Add(newModel);
+            _context.Add(newModel);
             _context.SaveChanges();
             return newModel;
         }

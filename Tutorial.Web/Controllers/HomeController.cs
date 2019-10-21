@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http.Extensions;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore;
@@ -43,13 +44,15 @@ namespace Tutorial.Web.Controllers
             {
                 Id = x.Id,
                 Name = $"{x.FirstName} {x.LastName}",
-                Age = DateTime.Now.Subtract(x.BirthDay).Days / 365
+                Age = DateTime.Now.Subtract(x.BirthDay).Days / 365,
+                Gender = x.Gender
             });
 
             var vm = new HomeIndexViewModel()
             {
                 Student = vms
             };
+            Response.Cookies.Append("17uCNRefId", "532176916");
             return View(vm);
             #endregion
         }
@@ -94,6 +97,13 @@ namespace Tutorial.Web.Controllers
             }
             return View();
             #endregion
+        }
+
+        public IActionResult Test()
+        {
+            bool login = Request.Cookies["SecureToken"] != null && !string.IsNullOrEmpty(Request.Cookies["SecureToken"]) ? true : false;
+            var a =Request.Host.Value + Request.Headers["HeaderReferer"].ToString();
+            return Redirect(a);
         }
     }
 }

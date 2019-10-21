@@ -12,8 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Views\Account\" />
-    <Folder Include="Views\Shared\" />
+    <Folder Include="wwwroot\img\" />
   </ItemGroup>
 
   <ProjectExtensions><VisualStudio><UserProperties properties_4launchsettings_1json__JsonSchema="http://json.schemastore.org/appsettings" /></VisualStudio></ProjectExtensions>

@@ -1,0 +1,16 @@
+﻿@model IEnumerable<StudentViewModel>
+<table class="table">
+    <thead class="thead-light">
+    <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Gender</th>
+        <th>Options</th>
+    </tr>
+    </thead>
+    @foreach (var s in @Model)
+    {   
+        <partial name="_Student" for="@s"/>
+    }
+</table> 
