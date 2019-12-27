@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\.net Project\\Tutorial.Web\\Tutorial.Web\\Tutorial.Web.csproj": {}
+    "D:\\.net Projects\\Tutorial.Web\\Tutorial.Web\\Tutorial.Web.csproj": {}
   },
   "projects": {
-    "D:\\.net Project\\Tutorial.Web\\Tutorial.Web\\Tutorial.Web.csproj": {
+    "D:\\.net Projects\\Tutorial.Web\\Tutorial.Common\\Tutorial.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\.net Project\\Tutorial.Web\\Tutorial.Web\\Tutorial.Web.csproj",
-        "projectName": "Tutorial.Web",
-        "projectPath": "D:\\.net Project\\Tutorial.Web\\Tutorial.Web\\Tutorial.Web.csproj",
+        "projectUniqueName": "D:\\.net Projects\\Tutorial.Web\\Tutorial.Common\\Tutorial.Common.csproj",
+        "projectName": "Tutorial.Common",
+        "projectPath": "D:\\.net Projects\\Tutorial.Web\\Tutorial.Common\\Tutorial.Common.csproj",
         "packagesPath": "C:\\Users\\lyglh\\.nuget\\packages\\",
-        "outputPath": "D:\\.net Project\\Tutorial.Web\\Tutorial.Web\\obj\\",
+        "outputPath": "D:\\.net Projects\\Tutorial.Web\\Tutorial.Common\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -21,7 +21,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp2.2"
+          "netcoreapp3.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -30,7 +30,7 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp2.2": {
+          "netcoreapp3.0": {
             "projectReferences": {}
           }
         },
@@ -41,28 +41,255 @@
         }
       },
       "frameworks": {
-        "netcoreapp2.2": {
+        "netcoreapp3.0": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.0.1, 3.0.1]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[3.0.0, 3.0.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[3.0.0, 3.0.0]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\.net Projects\\Tutorial.Web\\Tutorial.Model\\Tutorial.Model.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\.net Projects\\Tutorial.Web\\Tutorial.Model\\Tutorial.Model.csproj",
+        "projectName": "Tutorial.Model",
+        "projectPath": "D:\\.net Projects\\Tutorial.Web\\Tutorial.Model\\Tutorial.Model.csproj",
+        "packagesPath": "C:\\Users\\lyglh\\.nuget\\packages\\",
+        "outputPath": "D:\\.net Projects\\Tutorial.Web\\Tutorial.Model\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\lyglh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://api.nuget.17usoft.com/v3/index.json": {},
+          "http://tcwnuget.17usoft.com/nuget/": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.0": {
+            "projectReferences": {
+              "D:\\.net Projects\\Tutorial.Web\\Tutorial.Common\\Tutorial.Common.csproj": {
+                "projectPath": "D:\\.net Projects\\Tutorial.Web\\Tutorial.Common\\Tutorial.Common.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.0": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.0.1, 3.0.1]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[3.0.0, 3.0.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[3.0.0, 3.0.0]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\.net Projects\\Tutorial.Web\\Tutorial.ViewModel\\Tutorial.ViewModel.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\.net Projects\\Tutorial.Web\\Tutorial.ViewModel\\Tutorial.ViewModel.csproj",
+        "projectName": "Tutorial.ViewModel",
+        "projectPath": "D:\\.net Projects\\Tutorial.Web\\Tutorial.ViewModel\\Tutorial.ViewModel.csproj",
+        "packagesPath": "C:\\Users\\lyglh\\.nuget\\packages\\",
+        "outputPath": "D:\\.net Projects\\Tutorial.Web\\Tutorial.ViewModel\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\lyglh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://api.nuget.17usoft.com/v3/index.json": {},
+          "http://tcwnuget.17usoft.com/nuget/": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.0": {
+            "projectReferences": {
+              "D:\\.net Projects\\Tutorial.Web\\Tutorial.Common\\Tutorial.Common.csproj": {
+                "projectPath": "D:\\.net Projects\\Tutorial.Web\\Tutorial.Common\\Tutorial.Common.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.0": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.0.1, 3.0.1]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[3.0.0, 3.0.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[3.0.0, 3.0.0]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\.net Projects\\Tutorial.Web\\Tutorial.Web\\Tutorial.Web.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\.net Projects\\Tutorial.Web\\Tutorial.Web\\Tutorial.Web.csproj",
+        "projectName": "Tutorial.Web",
+        "projectPath": "D:\\.net Projects\\Tutorial.Web\\Tutorial.Web\\Tutorial.Web.csproj",
+        "packagesPath": "C:\\Users\\lyglh\\.nuget\\packages\\",
+        "outputPath": "D:\\.net Projects\\Tutorial.Web\\Tutorial.Web\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\lyglh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://api.nuget.17usoft.com/v3/index.json": {},
+          "http://tcwnuget.17usoft.com/nuget/": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.0": {
+            "projectReferences": {
+              "D:\\.net Projects\\Tutorial.Web\\Tutorial.Common\\Tutorial.Common.csproj": {
+                "projectPath": "D:\\.net Projects\\Tutorial.Web\\Tutorial.Common\\Tutorial.Common.csproj"
+              },
+              "D:\\.net Projects\\Tutorial.Web\\Tutorial.Model\\Tutorial.Model.csproj": {
+                "projectPath": "D:\\.net Projects\\Tutorial.Web\\Tutorial.Model\\Tutorial.Model.csproj"
+              },
+              "D:\\.net Projects\\Tutorial.Web\\Tutorial.ViewModel\\Tutorial.ViewModel.csproj": {
+                "projectPath": "D:\\.net Projects\\Tutorial.Web\\Tutorial.ViewModel\\Tutorial.ViewModel.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.0": {
           "dependencies": {
-            "Microsoft.AspNetCore.App": {
-              "suppressParent": "All",
+            "Microsoft.AspNetCore.Mvc": {
               "target": "Package",
-              "version": "[2.2.0, )",
-              "autoReferenced": true
+              "version": "[2.2.0, )"
             },
             "Microsoft.AspNetCore.Razor.Design": {
               "suppressParent": "All",
               "target": "Package",
               "version": "[2.2.0, )"
             },
-            "Microsoft.NETCore.App": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.2.0, )",
-              "autoReferenced": true
-            },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
-              "version": "[2.2.3, )"
+              "version": "[3.0.0, )"
+            },
+            "MySql.Data.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.18, )"
             }
           },
           "imports": [
@@ -75,7 +302,33 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.0.1, 3.0.1]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[3.0.1, 3.0.1]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[3.0.0, 3.0.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[3.0.0, 3.0.0]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

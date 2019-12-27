@@ -3,30 +3,28 @@
     ViewBag.Title = "Welcome to Tutorial";
 }
 
+<div id="app">
+    <el-table :data="tableData2"
+                style="width: 100%"
+                :row-class-name="tableRowClassName">
+        <el-table-column prop="date"
+                            label="日期"
+                            width="180">
+        </el-table-column>
+        <el-table-column prop="name"
+                            label="姓名"
+                            width="180">
+        </el-table-column>
+        <el-table-column prop="address"
+                            label="地址">
+        </el-table-column>
+    </el-table>
+</div>
+
 <partial name="_StudentTable" for="@Model.Student" />
 
 <input type="hidden" id="JumpUrl" value="@Model.Student.FirstOrDefault().Name" />
-
-<script type="text/javascript" src="https://b.bdstatic.com/searchbox/icms/searchbox/js/swan-2.0.12.js"></script>
-<script type="text/javascript">
-        var BDrefid = getCookie('17uCNRefId');
-        var BDSecureToken = getCookie('SecureToken');
-        if (BDrefid == '532176916' && (BDSecureToken == null || BDSecureToken == '')) {
-            debugger;
-            console.log('@Model.Student.FirstOrDefault().Name.ToString()');
-            console.log(BDrefid, BDSecureToken);
-            swan.webView.navigateTo({
-                url: '/pages/login/login?sceneryReturnUrl=' + '@Model.Student.FirstOrDefault().Name.ToString()'
-            });
-        }
-        function getCookie(name) {
-            var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
-            if (arr = document.cookie.match(reg))
-                return unescape(arr[2]);
-            else
-                return null;
-        }
-</script>
+<script src="~/js/student/index.js"></script>
 
 @section bottom
 {

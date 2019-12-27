@@ -6,7 +6,6 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http.Extensions;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
-using Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore;
 using Newtonsoft.Json;
 using Tutorial.Web.Model;
 using Tutorial.Web.Services;
@@ -14,7 +13,7 @@ using Tutorial.Web.ViewModels;
 
 namespace Tutorial.Web.Controllers
 {
-    public class HomeController : Controller
+    public partial class HomeController : Controller
     {
         private readonly IServices<Student> _repository;
 
@@ -25,36 +24,37 @@ namespace Tutorial.Web.Controllers
 
         public IActionResult Index()
         {
-            #region 6.Controller 返回View
-            //return Content("Hello From HomeController");
-            //var st = new Student
+            //#region 6.Controller 返回View
+            ////return Content("Hello From HomeController");
+            ////var st = new Student
+            ////{
+            ////    Id = 1,
+            ////    FirstName = "Nick",
+            ////    LastName = "Carter"
+            ////};
+            ////使用Razor引擎
+            ////使用接口返回指定类型
+            //#endregion
+
+            //#region 7.ViewModel
+            //var list = _repository.GetAll();
+
+            //var vms = list.Select(x => new StudentViewModel()
             //{
-            //    Id = 1,
-            //    FirstName = "Nick",
-            //    LastName = "Carter"
+            //    Id = x.Id,
+            //    Name = $"{x.FirstName} {x.LastName}",
+            //    Age = DateTime.Now.Subtract(x.BirthDay).Days / 365,
+            //    Gender = x.Gender
+            //});
+
+            //var vm = new HomeIndexViewModel()
+            //{
+            //    Student = vms
             //};
-            //使用Razor引擎
-            //使用接口返回指定类型
-            #endregion
-
-            #region 7.ViewModel
-            var list = _repository.GetAll();
-
-            var vms = list.Select(x => new StudentViewModel()
-            {
-                Id = x.Id,
-                Name = $"{x.FirstName} {x.LastName}",
-                Age = DateTime.Now.Subtract(x.BirthDay).Days / 365,
-                Gender = x.Gender
-            });
-
-            var vm = new HomeIndexViewModel()
-            {
-                Student = vms
-            };
-            Response.Cookies.Append("17uCNRefId", "532176916");
-            return View(vm);
-            #endregion
+            //Response.Cookies.Append("17uCNRefId", "532176916");
+            //#endregion
+            return View("~/Views/Home/Index.cshtml");
+            
         }
 
 

@@ -1,0 +1,24 @@
+{
+  "name": "Tutorial.Web",
+  "version": "1.0.0",
+  "description": "Web Develop Tutorial.",
+  "main": "index.js",
+  "dependencies": {
+    "element-ui": "^2.12.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Houwe1/Tutorial.Web.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Houwe1/Tutorial.Web/issues"
+  },
+  "homepage": "https://github.com/Houwe1/Tutorial.Web#readme"
+}
