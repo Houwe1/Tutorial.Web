@@ -52,7 +52,7 @@ HostName xxx.com
 User xxx
 IdentityFile C:\\Users\\xxx\\.ssh\\id_rsa
 
-# Secnd User Config
+# Second User Config
 Host github.com
 HostName github.com
 User yyy
